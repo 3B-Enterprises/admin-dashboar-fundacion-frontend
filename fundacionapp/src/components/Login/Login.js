@@ -2,36 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Redirect } from "react-router-dom"
 
 function LoginForm() {
-//   let history = useHistory();
-//   useEffect(() => {
-//     localStorage.getItem("USER_KEY");
-//   }, []);
 
-//   const [userName, setUserName] = useState("");
-//   const [password, setPassword] = useState("");
   const handleLogin = () => {
-    console.log("funciona");
-    // const req = await loginUser(userName, password);
-    // const ROLE = req.data.user.role;
-
-    // if (req.status === 200) {
-    //   localStorage.setItem("USER_KEY", req.data.token);
-    //   if (ROLE === 1) {
-    //     localStorage.setItem("ROLE", "Admin_Role");
-    //     console.log("vamos a admin", ROLE);
-    //     history.push("/dashboard");
-    //   }
-    //   if (ROLE === 2) {
-    //     localStorage.setItem("ROLE", "Cashier_Role");
-    //     console.log("vamos a cajero", ROLE);
-    //     history.push("/cashier");
-    //   }
-    //   if (ROLE === 3) {
-    //     localStorage.setItem("ROLE", "Storehouse_Role");
-    //     console.log("vamos a almacen", ROLE);
-    //     history.push("/storehouse");
-    //   }
-    // }
+    console.log("funciona");    
   };
 
   return (

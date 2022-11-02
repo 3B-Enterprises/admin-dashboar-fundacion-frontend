@@ -1,10 +1,15 @@
-import React, { useEffect, useState } from "react";
-import { Redirect } from "react-router-dom"
+import React, { useState } from "react";
+import {loginuser} from "../../utils/requests";
 
 function LoginForm() {
+  const[user,setUser] = useState("");
+  const[pass,setPass] = useState("");
 
-  const handleLogin = () => {
-    console.log("funciona");    
+  const handleLogin = async(user, pass) => {
+    const req = await loginuser(user,pass);
+    if (req.status === 200) {
+      
+    }
   };
 
   return (
@@ -39,7 +44,7 @@ function LoginForm() {
                       autoComplete="off"
                       className="text-base leading-7 py-2 px-4 w-full min-h-[44px] border-2 rounded focus:outline-none shadow-md"
                       onChange={(e) => {
-                        console.log(e.target.value);
+                        setUser(e.target.value)
                       }}
                     />
                   </div>
@@ -52,7 +57,7 @@ function LoginForm() {
                       name="password"
                       className="text-base leading-7 py-2 px-4 w-full min-h-[44px] border-2 rounded focus:outline-none bg-[rgb(255, 255, 255)] shadow-md"
                       onChange={(e) => {
-                        console.log(e.target.value);
+                        setPass(e.target.value);
                       }}
                     />
                   </div>
@@ -72,7 +77,7 @@ function LoginForm() {
                       className="bg-[#FF6600] text-[#ffffff] font-semibold cursor-pointer text-base leading-7 py-2 px-4 w-full min-h-[44px] border-unset rounded outline outline-[rgb(84 105 212 / 0.5)] bg-[rgb(255, 255, 255)] shadow-md"
                       type="submit"
                       name="submit"
-                      onClick={() => handleLogin()}
+                      onSubmit={handleLogin(user,pass)}
                     />
                   </div>
                 </div>

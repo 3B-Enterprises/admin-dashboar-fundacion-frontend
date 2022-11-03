@@ -11,6 +11,6 @@ export const PrivateRoute = ({Component}) => {
     }
  
 }
-PrivateRoute.PropTypes = {
-    Component: PropTypes.element
-};
+// PrivateRoute.PropTypes = {
+//     Component: PropTypes.any
+// };

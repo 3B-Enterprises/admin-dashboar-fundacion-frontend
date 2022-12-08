@@ -1,6 +1,4 @@
-import React from "react";
 import { Navigate } from "react-router-dom";
-import PropTypes from 'prop-types';
 
 export const PrivateRoute = ({Component}) => {
     const isAuthenticated = window.localStorage.getItem("Token");
@@ -11,6 +9,3 @@ export const PrivateRoute = ({Component}) => {
     }
  
 }
-// PrivateRoute.PropTypes = {
-//     Component: PropTypes.any
-// };

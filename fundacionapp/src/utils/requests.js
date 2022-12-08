@@ -13,3 +13,10 @@ export const loginuser = async (user,pass)=>{
     }
 
 }
+export const getChild = async(nui)=>{
+    try {
+        const req = await axios.get('',{headers:{Authorization:''}})
+    } catch (error) {
+        
+    }
+}

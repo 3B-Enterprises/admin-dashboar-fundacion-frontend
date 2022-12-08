@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import {loginuser} from "../../utils/requests";
-import {redirect} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 function LoginForm() {
   const[user,setUser] = useState("");
   const[pass,setPass] = useState("");
-  const redirection = redirect();
+  const navigation = useNavigate();
 
   const handleLogin = async(user, pass) => {
     const req = await loginuser(user,pass);
     if (req.status === 200) {
-      redirection('/dashboard')
+      window.localStorage.setItem('TOKEN',req.data);
+      navigation('/dashboard')
     }else{
-      redirection('/')
+      navigation("/");
     }
   };
 

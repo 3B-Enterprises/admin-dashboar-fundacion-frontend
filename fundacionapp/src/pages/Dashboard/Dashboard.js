@@ -12,7 +12,7 @@ export const Dashboard = () => {
       </div>
       <div className='flex-1'>
         <div className='mx-auto w-4/3'><CardInfo total={1}/></div>
-        <div><Table data={[{nombre:'Andrés',identificación:'1001999130',estado:'Activo'}]}/></div>
+        <div><Table data={[{nombre:'Andrés',identificación:'1010234440',estado:'Activo'}]}/></div>
       </div>
     </div>
   );

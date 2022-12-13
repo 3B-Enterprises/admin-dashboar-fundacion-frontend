@@ -24,7 +24,7 @@ export const Carne = () => {
   if (user !== 404) {
     return (
       <div className="flex">
-        <div className="h-screen w-1/6">
+        <div className="hidden md:block h-screen w-1/6">
           <Navbar />
         </div>
         <div className="flex-1">

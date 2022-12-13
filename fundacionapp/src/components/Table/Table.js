@@ -73,8 +73,8 @@ export const Table = ({ data }) => {
         ]}
         search={true}
         style={{
-          table: { "table-layout": "fixed", "margin-top": "20px" },
-          td: { width: "150px", border: "1px solid #ccc" },
+          table: { "table-layout": "fixed", "margin-top": "20px",border : "1px solid #000" },
+          td: { width: "180px", border: "1px solid #000" },
           th: { "text-align": "center", width: "80px" },
           container: { "margin-top": "20px" },
           header: {},

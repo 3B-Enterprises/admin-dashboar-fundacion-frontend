@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/admin-dashboard-fundacion-frontend/static/css/main.4cbda20f.css",
-    "main.js": "/admin-dashboard-fundacion-frontend/static/js/main.d2feb738.js",
-    "index.html": "/admin-dashboard-fundacion-frontend/index.html",
-    "static/media/index.cjs": "/admin-dashboard-fundacion-frontend/static/media/index.cd351d7c31d0d3fccf96.cjs",
-    "main.4cbda20f.css.map": "/admin-dashboard-fundacion-frontend/static/css/main.4cbda20f.css.map",
-    "main.d2feb738.js.map": "/admin-dashboard-fundacion-frontend/static/js/main.d2feb738.js.map"
+    "main.css": "/admin-dashboard-fundacion-frontend/fundacionapp/static/css/main.4cbda20f.css",
+    "main.js": "/admin-dashboard-fundacion-frontend/fundacionapp/static/js/main.818d2a40.js",
+    "index.html": "/admin-dashboard-fundacion-frontend/fundacionapp/index.html",
+    "static/media/index.cjs": "/admin-dashboard-fundacion-frontend/fundacionapp/static/media/index.cd351d7c31d0d3fccf96.cjs",
+    "main.4cbda20f.css.map": "/admin-dashboard-fundacion-frontend/fundacionapp/static/css/main.4cbda20f.css.map",
+    "main.818d2a40.js.map": "/admin-dashboard-fundacion-frontend/fundacionapp/static/js/main.818d2a40.js.map"
   },
   "entrypoints": [
     "static/css/main.4cbda20f.css",
-    "static/js/main.d2feb738.js"
+    "static/js/main.818d2a40.js"
   ]
 }

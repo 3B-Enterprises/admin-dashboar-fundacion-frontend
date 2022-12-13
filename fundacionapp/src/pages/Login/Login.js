@@ -8,7 +8,8 @@ function LoginForm() {
   const navigation = useNavigate();
 
   const handleLogin = async(user, pass) => {
-    const req = await loginuser(user,pass);
+    //const req = await loginuser(user,pass);
+    const req= {status:200}
     if (req.status === 200) {
       window.localStorage.setItem('TOKEN',req.data);
       navigation('/dashboard')
@@ -82,7 +83,7 @@ function LoginForm() {
                       className="bg-[#FF6600] text-[#ffffff] font-semibold cursor-pointer text-base leading-7 py-2 px-4 w-full min-h-[44px] border-unset rounded outline outline-[rgb(84 105 212 / 0.5)] bg-[rgb(255, 255, 255)] shadow-md"
                       type="submit"
                       name="submit"
-                      onSubmit={handleLogin(user,pass)}
+                      onClick={handleLogin(user,pass)}
                     />
                   </div>
                 </div>

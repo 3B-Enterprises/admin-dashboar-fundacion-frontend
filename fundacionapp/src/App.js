@@ -6,6 +6,7 @@ import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
 import {ContextProvider,UserContext} from './utils/UserContext';
 import {useContext} from 'react';
 import { EditForm } from './pages/EditForm/EditForm';
+import { Carne } from './components/Carne/Carne';
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
               element={<PrivateRoute Component={<Dashboard />} />}
             ></Route>
             <Route path="/dash" element={<Dashboard />}></Route>
-            <Route path="/detail/:identificacion"></Route>
+            <Route path="/detail/:identificacion" element={<Carne/>}></Route>
             <Route path="/edit/:identificacion" element={<EditForm/>}></Route>
           </Routes>
         </ContextProvider>

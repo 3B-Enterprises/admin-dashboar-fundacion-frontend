@@ -1,4 +1,4 @@
-import React from 'react'
+import {useEffect,useState} from 'react'
 import { CardInfo } from '../../components/CardInfo/CardInfo';
 import { Navbar } from '../../components/Nav/Navbar'
 import { Table } from '../../components/Table/Table';

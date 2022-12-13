@@ -12,7 +12,7 @@ export const Modal = ({ setModalOn,setChoice }) => {
     }
 
   return (
-    <div className="bg-black opacity-80 fixed inset-0 z-50">
+    <div className="bg-black opacity-95 fixed inset-0 z-50">
       <div className="flex h-screen justify-center items-center">
         <div className="flex-col justify-center bg-white py-12 px-24 border rounded-xl">
           <div className="mb-5">

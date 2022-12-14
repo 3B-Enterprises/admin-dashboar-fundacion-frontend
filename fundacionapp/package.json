@@ -1,7 +1,7 @@
 {
   "name": "fundacionapp",
   "version": "0.1.0",
-  "homepage": "https://pipeprieto.github.io/admin-dashboard-fundacion-frontend",
+  "homepage": "https://pipeprieto.github.io/admin-dashboard-fundacion-frontend/fundacionapp",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -26,7 +26,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "yarn run build",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {

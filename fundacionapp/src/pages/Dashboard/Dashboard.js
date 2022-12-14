@@ -18,11 +18,11 @@ export const Dashboard = () => {
 
   return (
     <div className="flex">
-      <div className="h-screen w-1/6">
+      <div className="h-screen w-1/6 hidden lg:w-[13%] lg:block md:w-[22%] md:block">
         <Navbar />
       </div>
       <div className="flex-1">
-        <div className="mx-auto w-4/3">
+        <div className="w-4/3">
           <CardInfo total={data.length} />
         </div>
         <div className="">

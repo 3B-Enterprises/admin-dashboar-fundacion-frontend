@@ -21,7 +21,7 @@ function App() {
               element={<PrivateRoute Component={<Dashboard />} />}
             ></Route>
             <Route path="/dash" element={<Dashboard />}></Route>
-            <Route path="/detail/:identificacion" element={<Carne/>}></Route>
+            <Route path="/detail/:consecutive" element={<Carne/>}></Route>
             <Route path="/edit/:identificacion" element={<EditForm/>}></Route>
           </Routes>
         </ContextProvider>

@@ -8,7 +8,7 @@ export const Carne = () => {
     const params = useParams();
 
     const getUser = async ()=>{
-        const resp = await getChild(params.identificacion);
+        const resp = await getChild(params.consecutive);
         if (resp !== 404) {
             setUser(resp.data);
         }else{

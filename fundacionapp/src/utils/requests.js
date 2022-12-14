@@ -24,9 +24,9 @@ export const getChildren = async()=>{
     }
 }
 
-export const getChild = async(id)=>{
+export const getChild = async(cons)=>{
     try {
-        const res = await axios.get(`${url}/get/${id}`);
+        const res = await axios.get(`${url}/get/${cons}`);
         return res.data;
     } catch (error) {
         return error.response.status;

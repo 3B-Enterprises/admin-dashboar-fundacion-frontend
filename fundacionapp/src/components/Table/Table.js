@@ -39,7 +39,7 @@ export const Table = ({ data }) => {
                   className:
                     "py-2 px-4 px-auto border rounded-md text-white bg-orange-400",
                   onClick: () => {
-                    navigate(`/detail/${row.cell(3).data}`);
+                    navigate(`/detail/${row.cell(0).data}`);
                   },
                 },
                 "Detalle"

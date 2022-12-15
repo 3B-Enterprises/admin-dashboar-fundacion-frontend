@@ -24,11 +24,11 @@ export const Carne = () => {
   if (user !== 404) {
     return (
       <div className="flex">
-        <div className="hidden md:block h-screen w-1/6">
+        <div className="h-screen w-1/12">
           <Navbar />
         </div>
         <div className="flex-1">
-          <div className="shadow-md max-w-xs mx-auto text-center">
+          <div className="shadow-md max-w-xs mx-auto text-center lg:shadow-md md:shadow-md">
             <div className="bg-black">.</div>
             <img
               src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png"
@@ -36,7 +36,7 @@ export const Carne = () => {
               className="pt-4 w-1/2 mx-auto"
             />
             <h1 className="py-3 text-xl font-bold">
-              {user.name + user.surname}
+              {user.name + " " + user.surname}
             </h1>
             <p className="my-2">
               <span className="font-bold">Consecutivo:</span> {user.consecutive}
@@ -55,6 +55,8 @@ export const Carne = () => {
                 ? "No registra"
                 : new Date().getFullYear() -
                   new Date(user.dateOfBirth).getFullYear()}
+              {new Date().getFullYear() -
+                new Date(user.dateOfBirth).getFullYear() >1?' años': ' año'}
             </p>
             <p className="my-3">
               <b>Sexo: </b> {user.sexo === "" ? "No registra" : user.sexo}

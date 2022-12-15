@@ -18,7 +18,7 @@ export const Dashboard = () => {
 
   return (
     <div className="flex">
-      <div className="h-screen w-1/6 hidden lg:w-[13%] lg:block md:w-[22%] md:block">
+      <div className="h-screen w-1/6 lg:w-[13%] md:w-[22%] inset-0 z-50">
         <Navbar />
       </div>
       <div className="flex-1">

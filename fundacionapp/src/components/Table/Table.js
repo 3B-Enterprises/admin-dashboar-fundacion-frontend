@@ -21,7 +21,7 @@ export const Table = ({ data }) => {
     setModalOn(true)
   }
   return (
-    <div className="justify-center">
+    <div className="justify-center lg:ml-7">
       <Grid
         data={data}
         columns={[

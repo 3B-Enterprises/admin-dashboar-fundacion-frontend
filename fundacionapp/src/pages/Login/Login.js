@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {loginuser} from "../../utils/requests";
 import {useNavigate} from 'react-router-dom';
 
@@ -7,11 +7,11 @@ function LoginForm() {
   const[pass,setPass] = useState("");
   const navigation = useNavigate();
 
-  const handleLogin = async(user, pass) => {
-    //const req = await loginuser(user,pass);
-    const req= {status:200}
-    if (req.status === 200) {
-      window.localStorage.setItem('TOKEN',req.data);
+  const handleLogin = async() => {
+    const req = await loginuser(user,pass);
+    console.log(req)
+    if (req.statusCode === 200) {
+      window.localStorage.setItem('TOKEN',req.data.accessToken);
       navigation('/dashboard')
     }else{
       navigation("/");
@@ -83,7 +83,7 @@ function LoginForm() {
                       className="bg-[#FF6600] text-[#ffffff] font-semibold cursor-pointer text-base leading-7 py-2 px-4 w-full min-h-[44px] border-unset rounded outline outline-[rgb(84 105 212 / 0.5)] bg-[rgb(255, 255, 255)] shadow-md"
                       type="submit"
                       name="submit"
-                      onClick={handleLogin(user,pass)}
+                      onClick={handleLogin}
                     />
                   </div>
                 </div>

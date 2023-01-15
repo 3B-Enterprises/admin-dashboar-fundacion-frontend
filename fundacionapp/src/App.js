@@ -18,11 +18,15 @@ function App() {
             <Route path="/" element={<LoginForm />}></Route>
             <Route
               path="/dashboard"
-              element={<PrivateRoute Component={<Dashboard />} />}
-            ></Route>
+              element={
+                <PrivateRoute>
+                  <Dashboard />
+                </PrivateRoute>
+              }
+            />
             <Route path="/dash" element={<Dashboard />}></Route>
-            <Route path="/detail/:consecutive" element={<Carne/>}></Route>
-            <Route path="/edit/:identificacion" element={<EditForm/>}></Route>
+            <Route path="/detail/:consecutive" element={<Carne />}></Route>
+            <Route path="/edit/:identificacion" element={<EditForm />}></Route>
           </Routes>
         </ContextProvider>
       </div>

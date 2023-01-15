@@ -8,14 +8,10 @@ export const Navbar = () => {
   const[open,setOpen] = useState(false)
   const handleOpenClick = ()=>{
     setOpen(true)
-    console.log(open)
   }
   const handleCloseClick =()=>{
     setOpen(false);
   }
-  useEffect(()=>{
-    console.log(open)
-  },[])
   return (
     <>
       <div

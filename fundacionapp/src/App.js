@@ -4,9 +4,9 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import { Dashboard } from './pages/Dashboard/Dashboard';
 import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
 import {ContextProvider,UserContext} from './utils/UserContext';
-import {useContext} from 'react';
 import { EditForm } from './pages/EditForm/EditForm';
 import { Carne } from './components/Carne/Carne';
+import { Loading } from './pages/Loading/Loading';
 
 
 function App() {
@@ -24,9 +24,16 @@ function App() {
                 </PrivateRoute>
               }
             />
-            <Route path="/dash" element={<Dashboard />}></Route>
-            <Route path="/detail/:consecutive" element={<Carne />}></Route>
-            <Route path="/edit/:identificacion" element={<EditForm />}></Route>
+            <Route
+              path="/detail/:consecutive"
+              element={
+                <PrivateRoute>
+                  <Carne />
+                </PrivateRoute>
+              }
+            />
+            <Route path="/edit/:identificacion" element={<PrivateRoute><EditForm/></PrivateRoute>}></Route>
+            <Route path='/loading' exact element={<Loading/>}/>
           </Routes>
         </ContextProvider>
       </div>

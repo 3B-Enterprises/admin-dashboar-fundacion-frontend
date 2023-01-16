@@ -12,6 +12,10 @@ export const Navbar = () => {
   const handleCloseClick =()=>{
     setOpen(false);
   }
+
+  const logOut=()=>{
+    window.localStorage.setItem('TOKEN','')
+  }
   return (
     <>
       <div
@@ -46,7 +50,10 @@ export const Navbar = () => {
         </div>
         <div className="flex-col-reverse">
           <Link to="/">
-            <CiLogout className="mx-auto min-w-[20px] min-h-[20px] mb-4" />
+            <CiLogout
+              className="mx-auto min-w-[20px] min-h-[20px] mb-4"
+              onClick={logOut}
+            />
           </Link>
         </div>
       </nav>

@@ -28,7 +28,7 @@ function App() {
               path="/detail/:consecutive"
               element={
                 <PrivateRoute>
-                  <EditForm titulo="Detalle" accion="" />
+                  <Carne/>
                 </PrivateRoute>
               }
             />

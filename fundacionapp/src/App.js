@@ -28,12 +28,19 @@ function App() {
               path="/detail/:consecutive"
               element={
                 <PrivateRoute>
-                  <Carne />
+                  <EditForm titulo="Detalle" accion="" />
                 </PrivateRoute>
               }
             />
-            <Route path="/edit/:identificacion" element={<PrivateRoute><EditForm/></PrivateRoute>}></Route>
-            <Route path='/loading' exact element={<Loading/>}/>
+            <Route
+              path="/edit/:consecutive"
+              element={
+                <PrivateRoute>
+                  <EditForm titulo="Editar" accion="Editar" />
+                </PrivateRoute>
+              }
+            ></Route>
+            <Route path="/loading" exact element={<Loading />} />
           </Routes>
         </ContextProvider>
       </div>

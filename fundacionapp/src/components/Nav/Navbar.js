@@ -41,7 +41,7 @@ export const Navbar = () => {
           <GrClose className="text-orange-600" />
         </div>
         <div className="flex-1">
-          <Link to="/dash">
+          <Link to="/dashboard">
             <img
               src="https://cdn.discordapp.com/attachments/885708262211739669/1051861560756293782/WhatsApp_Image_2022-12-12_at_9.01.07_AM-removebg-preview.png"
               className="mx-auto min-w-[10px] min-h-[10px] mt-4 px-10 h-32"

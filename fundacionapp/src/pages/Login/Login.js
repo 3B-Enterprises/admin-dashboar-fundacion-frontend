@@ -12,7 +12,6 @@ function LoginForm() {
   const handleLogin = async() => {
     setLoader(true)
     const req = await loginuser(user,pass);
-    console.log(req)
     if (req.statusCode === 200) {
       setLoader(false)
       window.localStorage.setItem('TOKEN',req.data.accessToken);

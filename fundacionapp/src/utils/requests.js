@@ -33,7 +33,9 @@ export const getChildren = async()=>{
 export const getChild = async(cons)=>{
     try {
         const res = await axios.get(`${uri}/get/${cons}`);
+        console.log(res.data)
         return res.data;
+        
     } catch (error) {
         return error.response.status;
     }

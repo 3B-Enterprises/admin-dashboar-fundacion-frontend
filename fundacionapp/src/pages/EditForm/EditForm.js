@@ -14,7 +14,7 @@ export const EditForm = ({titulo,accion}) => {
     setLoader(true);
     const res = await getChild(params.consecutive);
     if (res.statusCode === 200) {
-      setInfo([res.data]);
+      setInfo(res.data);
     }
     setLoader(false);
   };
@@ -27,6 +27,11 @@ export const EditForm = ({titulo,accion}) => {
   const handleState = () => {
     console.log('a')
   };
+
+  const onSubmit= async () => {
+    console.log('onsubmit')
+
+  }
 
   if (loader === true) {
     return(<Loading/>)
@@ -48,7 +53,7 @@ export const EditForm = ({titulo,accion}) => {
                 name="name"
                 className="px-4 my-3 border-2 rounded focus:outline-none w-4/5 mx-auto"
                 onChange={handleState}
-                value={info[0].name}
+                value={info.name}
               />
               <label className="px-4 my-3 mx-auto font-bold">Apellido</label>
               <input
@@ -56,7 +61,7 @@ export const EditForm = ({titulo,accion}) => {
                 name="surname"
                 className="px-4 my-3 border-2 rounded focus:outline-none w-4/5 mx-auto"
                 onChange={handleState}
-                value={info[0].surname}
+                value={info.surname}
               />
               <label className="px-4 my-3 mx-auto font-bold">Sexo</label>
               <input
@@ -64,7 +69,7 @@ export const EditForm = ({titulo,accion}) => {
                 name="sexo"
                 className="px-4 my-3 border-2 rounded focus:outline-none w-4/5 mx-auto"
                 onChange={handleState}
-                value={info[0].sexo}
+                value={info.sexo}
               />
               <label className="px-4 my-3 mx-auto font-bold">
                 Tipo de indentificación
@@ -74,7 +79,7 @@ export const EditForm = ({titulo,accion}) => {
                 name="indetificationType"
                 className="px-4 my-3 border-2 rounded focus:outline-none w-4/5 mx-auto"
                 onChange={handleState}
-                value={info[0].identificationType}
+                value={info.identificationType}
               />
               <label className="px-4 my-3 mx-auto font-bold">
                 Identificación
@@ -84,7 +89,7 @@ export const EditForm = ({titulo,accion}) => {
                 name="identification"
                 className="px-4 my-3 border-2 rounded focus:outline-none w-4/5 mx-auto"
                 onChange={handleState}
-                value={info[0].identification}
+                value={info.identification}
               />
               <label className="px-4 my-3 mx-auto font-bold">
                 Nombre de la Madre
@@ -94,7 +99,7 @@ export const EditForm = ({titulo,accion}) => {
                 name="motherName"
                 className="px-4 my-3 border-2 rounded focus:outline-none w-4/5 mx-auto"
                 onChange={handleState}
-                value={info[0].motherName}
+                value={info.motherName}
               />
               <label className="px-4 my-3 mx-auto font-bold">Teléfono</label>
               <input
@@ -102,7 +107,7 @@ export const EditForm = ({titulo,accion}) => {
                 name="phone1"
                 className="px-4 my-3 border-2 rounded focus:outline-none w-4/5 mx-auto"
                 onChange={handleState}
-                value={info[0].phone1}
+                value={info.phone1}
               />
               <label className="px-4 my-3 mx-auto font-bold">Dirreción</label>
               <input
@@ -110,7 +115,7 @@ export const EditForm = ({titulo,accion}) => {
                 name="address"
                 className="px-4 my-3 border-2 rounded focus:outline-none w-4/5 mx-auto"
                 onChange={handleState}
-                value={info[0].address}
+                value={info.address}
               />
               <label className="px-4 my-3 mx-auto font-bold">Barrio</label>
               <input
@@ -118,7 +123,7 @@ export const EditForm = ({titulo,accion}) => {
                 name="neighborhood"
                 className="px-4 my-3 border-2 rounded focus:outline-none w-4/5 mx-auto"
                 onChange={handleState}
-                value={info[0].neighborhood}
+                value={info.neighborhood}
               />
               <label className="px-4 my-3 mx-auto font-bold">Zona</label>
               <input
@@ -126,7 +131,7 @@ export const EditForm = ({titulo,accion}) => {
                 name="zona"
                 className="px-4 my-3 border-2 rounded focus:outline-none w-4/5 mx-auto"
                 onChange={handleState}
-                value={info[0].zona}
+                value={info.zona}
               />
               <label className="px-4 my-3 mx-auto font-bold">
                 Fecha de Nacimiento
@@ -137,15 +142,16 @@ export const EditForm = ({titulo,accion}) => {
                 className="px-4 my-3 border-2 rounded focus:outline-none w-4/5 mx-auto"
                 onChange={handleState}
                 value={`${new Date(
-                  info[0].dateOfBirth
+                  info.dateOfBirth
                 ).getFullYear()}/${new Date(
-                  info[0].dateOfBirth
-                ).getMonth()}/${new Date(info[0].dateOfBirth).getDay()}`}
+                  info.dateOfBirth
+                ).getMonth()}/${new Date(info.dateOfBirth).getDay()}`}
               />
 
               <button
                 type="submit"
                 className="border rounded-md text-white bg-orange-400 w-20 my-4 mx-auto"
+                onClick={() => onSubmit()}
               >
                 {accion}
               </button>
@@ -171,7 +177,7 @@ export const EditForm = ({titulo,accion}) => {
                 name="name"
                 className="px-4 my-3 border-2 rounded focus:outline-none w-4/5 mx-auto"
                 onChange={handleState}
-                value={info[0].name}
+                value={info.name}
                 disabled
               />
               <label className="px-4 my-3 mx-auto font-bold">Apellido</label>
@@ -180,7 +186,7 @@ export const EditForm = ({titulo,accion}) => {
                 name="surname"
                 className="px-4 my-3 border-2 rounded focus:outline-none w-4/5 mx-auto"
                 onChange={handleState}
-                value={info[0].surname}
+                value={info.surname}
                 disabled
               />
               <label className="px-4 my-3 mx-auto font-bold">Sexo</label>
@@ -189,7 +195,7 @@ export const EditForm = ({titulo,accion}) => {
                 name="sexo"
                 className="px-4 my-3 border-2 rounded focus:outline-none w-4/5 mx-auto"
                 onChange={handleState}
-                value={info[0].sexo}
+                value={info.sexo}
                 disabled
               />
               <label className="px-4 my-3 mx-auto font-bold">
@@ -200,7 +206,7 @@ export const EditForm = ({titulo,accion}) => {
                 name="indetificationType"
                 className="px-4 my-3 border-2 rounded focus:outline-none w-4/5 mx-auto"
                 onChange={handleState}
-                value={info[0].identificationType}
+                value={info.identificationType}
                 disabled
               />
               <label className="px-4 my-3 mx-auto font-bold">
@@ -211,7 +217,7 @@ export const EditForm = ({titulo,accion}) => {
                 name="identification"
                 className="px-4 my-3 border-2 rounded focus:outline-none w-4/5 mx-auto"
                 onChange={handleState}
-                value={info[0].identification}
+                value={info.identification}
                 disabled
               />
               <label className="px-4 my-3 mx-auto font-bold">
@@ -222,7 +228,7 @@ export const EditForm = ({titulo,accion}) => {
                 name="motherName"
                 className="px-4 my-3 border-2 rounded focus:outline-none w-4/5 mx-auto"
                 onChange={handleState}
-                value={info[0].motherName}
+                value={info.motherName}
                 disabled
               />
               <label className="px-4 my-3 mx-auto font-bold">Teléfono</label>
@@ -231,7 +237,7 @@ export const EditForm = ({titulo,accion}) => {
                 name="phone1"
                 className="px-4 my-3 border-2 rounded focus:outline-none w-4/5 mx-auto"
                 onChange={handleState}
-                value={info[0].phone1}
+                value={info.phone1}
                 disabled
               />
               <label className="px-4 my-3 mx-auto font-bold">Dirreción</label>
@@ -240,7 +246,7 @@ export const EditForm = ({titulo,accion}) => {
                 name="address"
                 className="px-4 my-3 border-2 rounded focus:outline-none w-4/5 mx-auto"
                 onChange={handleState}
-                value={info[0].address}
+                value={info.address}
                 disabled
               />
               <label className="px-4 my-3 mx-auto font-bold">Barrio</label>
@@ -249,7 +255,7 @@ export const EditForm = ({titulo,accion}) => {
                 name="neighborhood"
                 className="px-4 my-3 border-2 rounded focus:outline-none w-4/5 mx-auto"
                 onChange={handleState}
-                value={info[0].neighborhood}
+                value={info.neighborhood}
                 disabled
               />
               <label className="px-4 my-3 mx-auto font-bold">Zona</label>
@@ -258,7 +264,7 @@ export const EditForm = ({titulo,accion}) => {
                 name="zona"
                 className="px-4 my-3 border-2 rounded focus:outline-none w-4/5 mx-auto"
                 onChange={handleState}
-                value={info[0].zona}
+                value={info.zona}
                 disabled
               />
               <label className="px-4 my-3 mx-auto font-bold">
@@ -270,16 +276,17 @@ export const EditForm = ({titulo,accion}) => {
                 className="px-4 my-3 border-2 rounded focus:outline-none w-4/5 mx-auto"
                 onChange={handleState}
                 value={`${new Date(
-                  info[0].dateOfBirth
+                  info.dateOfBirth
                 ).getFullYear()}/${new Date(
-                  info[0].dateOfBirth
-                ).getMonth()}/${new Date(info[0].dateOfBirth).getDay()}`}
+                  info.dateOfBirth
+                ).getMonth()}/${new Date(info.dateOfBirth).getDay()}`}
                 disabled
               />
 
               <button
                 type="submit"
                 className="border rounded-md text-white bg-orange-400 w-20 my-4 mx-auto"
+                onClick={() => onSubmit()}
               >
                 {accion}
               </button>
